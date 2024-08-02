@@ -1,19 +1,18 @@
+import React from 'react';
 
+const LocationDropdown = ({ onChange }) => {
+  const cities = ['Mumbai', 'Delhi', 'Bangalore', 'Goa']; // Replace with actual city data
 
-const LocationDropdown = () => {
   return (
-    <select placeholder="Select a location">
-    <option value='india'>India</option>
-      <option value='usa'>USA</option>
-      <option value='london'>London</option>
-      <option value='china'>China</option>
-
-      
-
+    <select onChange={(e) => onChange(e.target.value)}>
+      <option value="">Select City</option>
+      {cities.map((city) => (
+        <option key={city} value={city}>
+          {city}
+        </option>
+      ))}
     </select>
-      
-    
-  )
-}
+  );
+};
 
-export default LocationDropdown
+export default LocationDropdown;

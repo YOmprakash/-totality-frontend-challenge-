@@ -1,19 +1,22 @@
+import React from 'react';
 
+const PriceDropdown = ({ onChange }) => {
+  const priceRanges = [
+    { label: 'Any', value: '' },
+    { label: '0 - 10000', value: '0-10000' },
+    { label: '10001 - 20000', value: '10001-20000' },
+    // ... more price ranges
+  ];
 
-const PriceDropdown = () => {
-    return (
-      <select placeholder="Select a location">
-      <option value='india'>10000</option>
-        <option value='usa'>2000</option>
-        <option value='london'>3000</option>
-        <option value='china'>4000</option>
-  
-        
-  
-      </select>
-        
-      
-    )
-  }
-  
-  export default PriceDropdown
+  return (
+    <select onChange={(e) => onChange(e.target.value)}>
+      {priceRanges.map((range) => (
+        <option key={range.value} value={range.value}>
+          {range.label}
+        </option>
+      ))}
+    </select>
+  );
+};
+
+export default PriceDropdown;

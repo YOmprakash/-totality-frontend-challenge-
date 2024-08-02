@@ -1,429 +1,312 @@
 //data.js
 
-// import house images
-import House1 from "./houses/house1.jpeg";
-import House2 from "./houses/house2.jpeg";
-import House3 from "./houses/house3.jpeg";
-import House4 from "./houses/house4.jpeg";
-import House5 from "./houses/house5.jpeg";
-import House6 from "./houses/house6.jpeg";
-import House7 from "./houses/house7.jpeg";
-import House8 from "./houses/house8.jpeg";
-import House9 from "./houses/house9.jpeg";
-import House10 from "./houses/house10.jpeg";
-import House11 from "./houses/house11.jpeg";
-import House12 from "./houses/house12.jpeg";
-import House17 from "./houses/house17.jpeg";
-import House13 from "./houses/house14.jpeg";
-import House14 from "./houses/house15.jpeg";
-import House15 from "./houses/house16.jpeg";
-import House16 from "./houses/house17.jpeg";
-// import apartments images
-import Apartment1 from "./apartments/a1.png";
-import Apartment2 from "./apartments/a2.png";
-import Apartment3 from "./apartments/a3.png";
-import Apartment4 from "./apartments/a4.png";
-import Apartment5 from "./apartments/a5.png";
-import Apartment6 from "./apartments/a6.png";
-
-
-// import agents images
-import Agent1 from "./agents/agent1.png";
-import Agent2 from "./agents/agent2.png";
-import Agent3 from "./agents/agent3.png";
-import Agent4 from "./agents/agent4.png";
-import Agent5 from "./agents/agent5.png";
-import Agent6 from "./agents/agent6.png";
-import Agent7 from "./agents/agent7.png";
-import Agent8 from "./agents/agent8.png";
-import Agent9 from "./agents/agent9.png";
-import Agent10 from "./agents/agent10.png";
-import Agent11 from "./agents/agent11.png";
-import Agent12 from "./agents/agent12.png";
+import Hotel1 from "./houses/house1.jpeg";
+import Hotel2 from "./houses/house2.jpeg";
+import Hotel3 from "./houses/house3.jpeg";
+import Hotel4 from "./houses/house4.jpeg";
+import Hotel5 from "./houses/house5.jpeg";
+import Hotel6 from "./houses/house6.jpeg";
+import Hotel7 from "./houses/house7.jpeg";
+import Hotel8 from "./houses/house8.jpeg";
+import Hotel9 from "./houses/house9.jpeg";
+import Hotel10 from "./houses/house10.jpeg";
+import Hotel11 from "./houses/house11.jpeg";
+import Hotel12 from "./houses/house12.jpeg";
+import Hotel13 from "./houses/house13.jpeg";
+import Hotel14 from "./houses/house14.jpeg";
+import Hotel15 from "./houses/house15.jpeg";
+import Hotel16 from "./houses/house16.jpeg";
+import Hotel17 from "./houses/house17.jpeg";
+import Hotel18 from "./houses/house18.jpeg";
+import Hotel19 from "./houses/house19.jpg";
+import Hotel20 from "./houses/house20.jpg";
 
 export const LINKS = [
-  { text: "Home", targetId: "home" },
-  { text: "Properties", targetId: "properties" },
-  { text: "Contact", targetId: "contact" },
+  { text: "Home", path: "/" },
+  { text: "Properties", path: "properties" },
+  { text: "Contact", path: "contact" },
 ];
 
 export const housesData = [
   {
     id: 1,
-    type: "House",
-    name: "House 1",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
-    image: House1,
-    
-    country: "United States",
-    address: "7240C Argyle St. Lawndale, CA 90260",
+    name: "The Royal Palms",
+    description: "Luxurious beachfront resort with stunning ocean views and world-class amenities.",
+    city: "Goa",
+    address: "Baga Beach Road, Baga, Goa",
     bedrooms: "6",
     bathrooms: "3",
-    surface: "4200 sq ft",
-    year: "2016",
-    price: "110000",
-    agent: {
-      image: Agent1,
-      name: "Patricia Tullert",
-      phone: "0123 456 78910",
-    },
-  },
-  {
+    totalPrice: 150000,
+    discountPrice: 120000,
+    image: Hotel1,
+    amenities: ["Spa", "Gym", "Pool", "Wi-Fi", "Restaurant"],
+    rating: 4.9,
+},
+{
     id: 2,
-    type: "House",
-    name: "House 2",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
-    image: House2,
-    
-    country: "Canada",
-    address: "798 Talbot St. Bridgewater, NJ 08807",
-    bedrooms: "6",
-    bathrooms: "3",
-    surface: "4200 sq ft",
-    year: "2016",
-    price: "140000",
-    agent: {
-      image: Agent2,
-      name: "Daryl Hawker",
-      phone: "0123 456 78910",
-    },
-  },
-  {
-    id: 3,
-    type: "House",
-    name: "House 3",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
-    image: House3,
-   
-    country: "United States",
-    address: "2 Glen Creek St. Alexandria, VA 22304",
-    bedrooms: "6",
-    bathrooms: "3",
-    surface: "4200 sq ft",
-    year: "2016",
-    price: "170000",
-    agent: {
-      image: Agent3,
-      name: "Amado Smith",
-      phone: "0123 456 78910",
-    },
-  },
-  {
-    id: 4,
-    type: "House",
-    name: "House 4",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
-    image: House4,
-    
-    country: "Canada",
-    address: "84 Woodland St. Cocoa, FL 32927",
-    bedrooms: "6",
-    bathrooms: "3",
-    surface: "4200 sq ft",
-    year: "2016",
-    price: "200000",
-    agent: {
-      image: Agent4,
-      name: "Kaitlyn Gonzalez",
-      phone: "0123 456 78910",
-    },
-  },
-  {
-    id: 5,
-    type: "House",
-    name: "House 5",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
-    image: House5,
-
-    country: "United States",
-    address: "28 Westport Dr. Warminster, PA 18974",
-    bedrooms: "5",
-    bathrooms: "3",
-    surface: "4200 sq ft",
-    year: "2015",
-    price: "210000",
-    agent: {
-      image: Agent5,
-      name: "Grover Robinson",
-      phone: "0123 456 78910",
-    },
-  },
-  {
-    id: 6,
-    type: "House",
-    name: "House 6",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
-    image: House6,
- 
-    country: "Canada",
-    address: "32 Pawnee Street Butte, MT 59701",
-    bedrooms: "6",
-    bathrooms: "3",
-    surface: "6200 sq ft",
-    year: "2014",
-    price: "220000",
-    agent: {
-      image: Agent6,
-      name: "Karen Sorensen",
-      phone: "0123 456 78910",
-    },
-  },
-  {
-    id: 7,
-    type: "Apartament",
-    name: "Apartament 1",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
-    image: House7,
-    
-    country: "Canada",
-    address: "32 Pawnee Street Butte, MT 59701",
-    bedrooms: "2",
-    bathrooms: "1",
-    surface: "1200 sq ft",
-    year: "2012",
-    price: "20000",
-    agent: {
-      image: Agent7,
-      name: "Jawhar Shamil Naser",
-      phone: "0123 456 78910",
-    },
-  },
-  {
-    id: 8,
-    type: "Apartament",
-    name: "Apartament 2",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
-    image: House8,
-    
-    country: "United States",
-    address: "28 Westport Dr. Warminster, PA 18974",
-    bedrooms: "3",
-    bathrooms: "1",
-    surface: "1000 sq ft",
-    year: "2011",
-    price: "30000",
-    agent: {
-      image: Agent8,
-      name: "Juana Douglass",
-      phone: "0123 456 78910",
-    },
-  },
-  {
-    id: 9,
-    type: "Apartament",
-    name: "Apartament 3",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
-    image: House9,
-   
-    country: "United States",
-    address: "84 Woodland St. Cocoa, FL 32927",
-    bedrooms: "2",
-    bathrooms: "1",
-    surface: "1100 sq ft",
-    year: "2011",
-    price: "40000",
-    agent: {
-      image: Agent9,
-      name: "Jerry Schenck",
-      phone: "0123 456 78910",
-    },
-  },
-  {
-    id: 10,
-    type: "House",
-    name: "House 7",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
-    image: House10,
-  
-    country: "Canada",
-    address: "7240C Argyle St. Lawndale, CA 90260",
-    bedrooms: "5",
-    bathrooms: "3",
-    surface: "3200 sq ft",
-    year: "2015",
-    price: "117000",
-    agent: {
-      image: House10,
-      name: "Vera Levesque",
-      phone: "0123 456 78910",
-    },
-  },
-  {
-    id: 11,
-    type: "House",
-    name: "House 8",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
-    image: House11,
-  
-    country: "Canada",
-    address: "798 Talbot St. Bridgewater, NJ 08807",
-    bedrooms: "7",
-    bathrooms: "2",
-    surface: "2200 sq ft",
-    year: "2019",
-    price: "145000",
-    agent: {
-      image: Agent11,
-      name: "Sofia Gomes",
-      phone: "0123 456 78910",
-    },
-  },
-  {
-    id: 12,
-    type: "House",
-    name: "House 9",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
-    image: House13,
-    
-    country: "United States",
-    address: "2 Glen Creek St. Alexandria, VA 22304",
+    name: "Himalayan Retreat",
+    description: "Nestled in the Himalayas, offering panoramic mountain views and serene ambiance.",
+    city: "Manali",
+    address: "Old Manali Road, Manali, Himachal Pradesh",
     bedrooms: "4",
-    bathrooms: "4",
-    surface: "4600 sq ft",
-    year: "2015",
-    price: "139000",
-    agent: {
-      image: Agent12,
-      name: "Raymond Hood",
-      phone: "0123 456 78910",
-    },
-  },
-  {
-    id: 13,
-    type: "House",
-    name: "House 10",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
-    image: House10,
-  
-    country: "Canada",
-    address: "84 Woodland St. Cocoa, FL 32927",
-    bedrooms: "5",
     bathrooms: "2",
-    surface: "5200 sq ft",
-    year: "2014",
-    price: "180000",
-    agent: {
-      image: Agent1,
-      name: "Patricia Tullert",
-      phone: "0123 456 78910",
-    },
-  },
-  {
-    id: 14,
-    type: "House",
-    name: "House 11",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
-    image: House11,
-  
-    country: "United States",
-    address: "28 Westport Dr. Warminster, PA 18974",
-    bedrooms: "5",
-    bathrooms: "2",
-    surface: "3200 sq ft",
-    year: "2011",
-    price: "213000",
-    agent: {
-      image: Agent2,
-      name: "Daryl Hawker",
-      phone: "0123 456 78910",
-    },
-  },
-  {
-    id: 15,
-    type: "House",
-    name: "House 12",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
-    image: House12,
+    totalPrice: 120000,
+    discountPrice: 100000,
+    amenities: ["Spa", "Gym", "Pool", "Wi-Fi", "Restaurant"],
+    rating: 4.9,
+    image: Hotel2,
     
-    country: "Canada",
-    address: "32 Pawnee Street Butte, MT 59701",
-    bedrooms: "4",
-    bathrooms: "3",
-    surface: "5200 sq ft",
-    year: "2013",
-    price: "221000",
-    agent: {
-      image: Agent3,
-      name: "Amado Smith",
-      phone: "0123 456 78910",
-    },
-  },
-  {
-    id: 16,
-    type: "Apartament",
-    name: "Apartament 16",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
-    image: Apartment4,
+},
+{
+  id: 3,
+  name: "The Oberoi Rajvilas",
+  description: "Experience luxury amidst nature's splendor at this award-winning resort.",
+  city: "Jaipur",
+  address: "Jaipur-Delhi Highway, Jaipur, Rajasthan",
+  bedrooms: 5,
+  bathrooms: 4,
+  totalPrice: 30000,
+  discountPrice: 25000,
+  amenities: ["Spa", "Gym", "Pool", "Wi-Fi", "Restaurant"],
+  rating: 4.7,
+  image: Hotel3
+},
+{
+  id: 4,
+  name: "The Leela Palace",
+  description: "Indulge in luxury and sophistication in the heart of Bangalore.",
+  city: "Bangalore",
+  address: "Old Airport Road, Bangalore, Karnataka",
+  bedrooms: 3,
+  bathrooms: 2,
+  totalPrice: 28000,
+  discountPrice: 25000,
+  amenities: ["Spa", "Gym", "Pool", "Wi-Fi", "Restaurant"],
+  rating: 4.7,
+  image: Hotel4 // Replace with actual image path
+},
+{
+  id: 5,
+  name: "The Taj Mahal Palace",
+  description: "An iconic landmark offering unparalleled luxury and elegance.",
+  city: "Mumbai",
+  address: "Apollo Bunder, Colaba, Mumbai, Maharashtra",
+  bedrooms: 4,
+  bathrooms: 3,
+  totalPrice: 35000,
+  discountPrice: 32000,
+  amenities: ["Spa", "Gym", "Pool", "Wi-Fi", "Restaurant"],
+  rating: 4.9,
+  image: Hotel5 // Replace with actual image path
+},
+{
+  id: 6,
+  name: "The Lalit Great Eastern ",
+  description: "Experience the grandeur of colonial India at this heritage hotel.",
+  city: "Kolkata",
+  address: "1, Shakespeare Sarani, Kolkata, West Bengal",
+  bedrooms: 4,
+  bathrooms: 3,
+  totalPrice: 25000,
+  discountPrice: 22000,
+  amenities: ["Spa", "Gym", "Restaurant"],
+  rating: 4.6,
+  image: Hotel6
+},
+{
+  id: 7,
+  name: "The Park ",
+  description: "Modern luxury meets urban chic at this stylish hotel.",
+  city: "Hyderabad",
+  address: "Somajiguda, Hyderabad, Telangana",
+  bedrooms: 3,
+  bathrooms: 2,
+  totalPrice: 22000,
+  discountPrice: 19000,
+  amenities: ["Gym", "Pool", "Wi-Fi", "Restaurant"],
+  rating: 4.5,
+  image: Hotel7
+},
+{
+  id: 8,
+  name: "The St. Regis ",
+  description: "Indulge in opulence and sophistication at this iconic landmark.",
+  city: "Mumbai",
+  address: "Lower Parel, Mumbai, Maharashtra",
+  bedrooms: 5,
+  bathrooms: 4,
+  totalPrice: 38000,
+  discountPrice: 32000,
+  amenities: ["Spa", "Gym", "Pool", "Wi-Fi", "Restaurant"],
+  rating: 4.8,
+  image: Hotel8 // Replace with actual image path
+},
+{
+  id: 9,
+  name: "The Taj Lake Palace",
+  description: "Experience royalty on a floating palace in the heart of Lake Pichola.",
+  city: "Udaipur",
+  address: "Pichola Lake, Udaipur, Rajasthan",
+  bedrooms: 4,
+  bathrooms: 3,
+  totalPrice: 40000,
+  discountPrice: 35000,
+  amenities: ["Spa", "Pool", "Wi-Fi", "Restaurant"],
+  rating: 4.9,
+  image: Hotel9 // Replace with actual image path
+},
+{
+  id: 10,
+  name: "The Leela Palace",
+  description: "A luxurious retreat overlooking the Bay of Bengal.",
+  city: "Chennai",
+  address: "Adyar, Chennai, Tamil Nadu",
+  bedrooms: 4,
+  bathrooms: 3,
+  totalPrice: 32000,
+  discountPrice: 28000,
+  amenities: ["Spa", "Gym", "Pool", "Wi-Fi", "Restaurant"],
+  rating: 4.7,
+  image: Hotel10 // Replace with actual image path
+},
+{
+  id: 11,
+  name: "The Oberoi Amarvilas",
+  description: "Experience unparalleled luxury while witnessing the majestic Taj Mahal.",
+  city: "Agra",
+  address: "Taj Nagar, Agra, Uttar Pradesh",
+  bedrooms: 5,
+  bathrooms: 4,
+  totalPrice: 35000,
+  discountPrice: 30000,
+  amenities: ["Spa", "Gym", "Pool", "Wi-Fi", "Restaurant"],
+  rating: 4.8,
+  image: Hotel11 // Replace with actual image path
+},
+{
+  id: 12,
+  name: "The Ritz Carlton",
+  description: "Indulge in modern luxury with world-class amenities and impeccable service.",
+  city: "Bangalore",
+  address: "Residency Road, Bangalore, Karnataka",
+  bedrooms: 3,
+  bathrooms: 2,
+  totalPrice: 28000,
+  discountPrice: 25000,
+  amenities: ["Spa", "Gym", "Pool", "Wi-Fi", "Restaurant"],
+  rating: 4.6,
+  image: Hotel12 // Replace with actual image path
+},
+{
+  id: 13,
+  name: "The Taj Falaknuma Palace",
+  description: "Experience royal grandeur at this historic palace turned luxury hotel.",
+  city: "Hyderabad",
+  address: "Falaknuma Palace Road, Hyderabad, Telangana",
+  bedrooms: 5,
+  bathrooms: 4,
+  totalPrice: 40000,
+  discountPrice: 35000,
+  amenities: ["Spa", "Gym", "Pool", "Wi-Fi", "Restaurant"],
+  rating: 4.9,
+  image: Hotel13 // Replace with actual image path
+},
+{
+  id: 14,
+  name: "The Oberoi Grand",
+  description: "A historic landmark offering elegance and comfort in the heart of Kolkata.",
+  city: "Kolkata",
+  address: "5, Wood Street, Kolkata, West Bengal",
+  bedrooms: 4,
+  bathrooms: 3,
+  totalPrice: 28000,
+  discountPrice: 25000,
+  amenities: ["Spa", "Gym", "Restaurant"],
+  rating: 4.7,
+  image: Hotel14 // Replace with actual image path
+},
+{
+  id: 15,
+  name: "The Leela Palace ",
+  description: "Experience luxury and sophistication in the garden city of India.",
+  city: "Bangalore",
+  address: "HAL Old Airport Road, Bangalore, Karnataka",
+  bedrooms: 5,
+  bathrooms: 4,
+  totalPrice: 32000,
+  discountPrice: 28000,
+  amenities: ["Spa", "Gym", "Pool", "Wi-Fi", "Restaurant"],
+  rating: 4.8,
+  image:  Hotel15 // Replace with actual image path
+},
+{
+  id: 16,
+  name: "The Taj Mahal Palace",
+  description: "Indulge in luxury and heritage at this iconic hotel in the heart of the capital.",
+  city: "New Delhi",
+  address: "Mansingh Road, New Delhi",
+  bedrooms: 4,
+  bathrooms: 3,
+  totalPrice: 35000,
+  discountPrice: 30000,
+  amenities: ["Spa", "Gym", "Pool", "Wi-Fi", "Restaurant"],
+  rating: 4.9,
+  image: Hotel16 // Replace with actual image path
+},
+{
+  id: 17,
+  name: "The Ritz Carlton",
+  description: "Experience world-class luxury with stunning views of the Arabian Sea.",
+  city: "Mumbai",
+  address: "Worli, Mumbai, Maharashtra",
+  bedrooms: 4,
+  bathrooms: 3,
+  totalPrice: 32000,
+  discountPrice: 28000,
+  amenities: ["Spa", "Gym", "Pool", "Wi-Fi", "Restaurant"],
+  rating: 4.7,
+  image:  Hotel17 // Replace with actual image path
+},
+{
+  id: 18,
+  name: "The Oberoi",
+  description: "Modern luxury and comfort in the heart of Gurgaon.",
+  city: "Gurgaon",
+  address: "Golf Course Road, Gurgaon, Haryana",
+  bedrooms: 3,
+  bathrooms: 2,
+  totalPrice: 25000,
+  discountPrice: 22000,
+  amenities: ["Gym", "Pool", "Wi-Fi", "Restaurant"],
+  rating: 4.6,
+  image: Hotel18 // Replace with actual image path
+},{
+  id: 19,
+  name: "Taj Lake Palace",
+  description: "Experience royal luxury in a majestic palace on Lake Pichola.",
+  city: "Udaipur",
+  address: "Pichola Lake, Udaipur, Rajasthan",
+  bedrooms: 5,
+  bathrooms: 4,
+  totalPrice: 40000,
+  discountPrice: 35000,
+  amenities: ["Spa", "Gym", "Pool", "Wi-Fi", "Restaurant", "Bar"],
+  rating: 4.9,
+  image: Hotel19 // Replace with actual image path
+},
+{
+  id: 20,
+  name: "The Park",
+  description: "Stylish and contemporary hotel with a vibrant atmosphere.",
+  city: "Bangalore",
+  address: "MG Road, Bangalore, Karnataka",
+  bedrooms: 3,
+  bathrooms: 2,
+  totalPrice: 22000,
+  discountPrice: 19000,
+  amenities: ["Gym", "Pool", "Wi-Fi", "Restaurant", "Bar"],
+  rating: 4.5,
+  image: Hotel20 // Replace with actual image path
+}
 
-    country: "Canada",
-    address: "32 Pawnee Street Butte, MT 59701",
-    bedrooms: "2",
-    bathrooms: "1",
-    surface: "1300 sq ft",
-    year: "2011",
-    price: "21000",
-    agent: {
-      image: Agent4,
-      name: "Kaitlyn Gonzalez",
-      phone: "0123 456 78910",
-    },
-  },
-  {
-    id: 17,
-    type: "Apartament",
-    name: "Apartament 17",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
-    image: Apartment5,
-    
-    country: "United States",
-    address: "28 Westport Dr. Warminster, PA 18974",
-    bedrooms: "3",
-    bathrooms: "1",
-    surface: "1000 sq ft",
-    year: "2012",
-    price: "32000",
-    agent: {
-      image: Agent5,
-      name: "Grover Robinson",
-      phone: "0123 456 78910",
-    },
-  },
-  {
-    id: 18,
-    type: "Apartament",
-    name: "Apartament 18",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.",
-    image: Apartment6,
-    
-    country: "Canada",
-    address: "84 Woodland St. Cocoa, FL 32927",
-    bedrooms: "3",
-    bathrooms: "1",
-    surface: "1200 sq ft",
-    year: "2010",
-    price: "38000",
-    agent: {
-      image: Agent6,
-      name: "Karen Sorensen",
-      phone: "0123 456 78910",
-    },
-  },
 ];
