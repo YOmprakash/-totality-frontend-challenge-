@@ -1,4 +1,4 @@
-import  { useState ,useContext, useEffect} from 'react';
+import { useState, useContext, useEffect } from 'react';
 import LocationDropdown from './LocationDropdown';
 import PriceDropdown from './PriceDropdown';
 import RatingDropdown from './RatingDropdown';
@@ -7,7 +7,7 @@ import BedroomDropdown from './BedRoomDropdown';
 import { CartContext } from '../context/CartContext';
 
 const Search = () => {
-  const { data, setData } = useContext(CartContext);
+  const { data, setFilteredHotels } = useContext(CartContext);
   const [filters, setFilters] = useState({
     city: '',
     price: '',
@@ -17,19 +17,18 @@ const Search = () => {
 
   const handleFilterChange = (filterName, value) => {
     setFilters({ ...filters, [filterName]: value });
- 
-    setData((prevData) => ({
-      ...prevData, // Preserve other data properties
-      filters, // Update the filters object within the data state
-    }));
+  };
 
+  const clearFilters = () => {
+    setFilters({
+      city: '',
+      price: '',
+      rating: '',
+      bedrooms: '',
+    });
   };
 
   useEffect(() => {
-    handleSearch(); 
-  }, [filters]);
-
-  const handleSearch = () => {
     const filteredHotels = data.filter((hotel) => {
       return (
         (!filters.city || hotel.city === filters.city) &&
@@ -41,19 +40,34 @@ const Search = () => {
       );
     });
 
-   setData({...data,  filteredHotels});
-  };
+    setFilteredHotels(filteredHotels);
+  }, [filters, data, setFilteredHotels]);
 
   return (
-    <div className="bg-[#f5f5f5] border-2 p-4 max-w-[900px] mx-auto">
-      <div className="flex gap-4">
+    <div className="bg-gray-100 border-2 p-4 lg:max-w-4xl mx-auto my-4 rounded-md">
+    <div className="flex flex-wrap gap-4 mb-4">
+      <div className="w-full sm:w-1/2 md:w-1/5">
         <LocationDropdown onChange={(value) => handleFilterChange('city', value)} />
+      </div>
+      <div className="w-full sm:w-1/2 md:w-1/5">
         <PriceDropdown onChange={(value) => handleFilterChange('price', value)} />
+      </div>
+      <div className="w-full sm:w-1/2 md:w-1/5">
         <RatingDropdown onChange={(value) => handleFilterChange('rating', value)} />
+      </div>
+      <div className="w-full sm:w-1/2 md:w-1/5">
         <BedroomDropdown onChange={(value) => handleFilterChange('bedrooms', value)} />
       </div>
-      <button onClick={handleSearch}>Search</button>
     </div>
+    <div className="flex justify-end">
+      <button
+        onClick={clearFilters}
+        className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
+      >
+        Clear Filters
+      </button>
+    </div>
+  </div>
   );
 };
 

@@ -237,7 +237,7 @@ export const housesData = [
   discountPrice: 28000,
   amenities: ["Spa", "Gym", "Pool", "Wi-Fi", "Restaurant"],
   rating: 4.8,
-  image:  Hotel15 // Replace with actual image path
+  image:  Hotel15 
 },
 {
   id: 16,

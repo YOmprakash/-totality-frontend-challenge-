@@ -97,7 +97,7 @@ const HouseDetailsPage = () => {
     onClick={clickToCart}
     className="bg-blue-500 text-white px-4 py-2 w-full rounded-md mt-4 hover:bg-blue-700"
   >
-    Book Now
+    Add to Cart
   </button>
 </div>
 
